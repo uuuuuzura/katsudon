@@ -1,0 +1,205 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+:root {
+  --step-1: #ee947c;
+  --step-2: #d37d8c;
+  --step-3: #a86f93;
+  --step-4: #77648b;
+  --step-5: #4b5876;
+  --step-6: #2f4858;
+
+  --body-text: #374955;
+}
+
+body {
+  background: url(../img/stripes-light.png);
+  font: 16px 'Montserrat', sans-serif;
+  color: var(--body-text);
+}
+
+main {
+  margin: 1rem;
+}
+
+.container {
+  background: #fff;
+  margin: 0 auto;
+  max-width: 850px;
+}
+
+.link {
+  color: var(--step-1);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--step-2);
+}
+
+.banner {
+  background: url(../img/ib-header.jpg) center/cover;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: calc((1 / 2.4) * 100%);
+}
+
+.sitenav {
+  font-weight: 900;
+  letter-spacing: 0.075rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.sitenav__link {
+  color: #fff;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.sitenav--step-1 {
+  background-color: var(--step-1);
+}
+
+.sitenav--step-2 {
+  background-color: var(--step-2);
+}
+
+.sitenav--step-3 {
+  background-color: var(--step-3);
+}
+
+.sitenav--step-4 {
+  background-color: var(--step-4);
+}
+
+.sitenav--step-5 {
+  background-color: var(--step-5);
+}
+
+.sitenav--step-6 {
+  background-color: var(--step-6);
+}
+
+.pagename {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 0.25rem;
+  margin: 2rem 0 4rem;
+  text-transform: uppercase;
+}
+
+.pagename::after {
+  background: linear-gradient(
+    to right,
+    var(--step-1) 16.6%,
+    var(--step-2) 16.6% 33.2%,
+    var(--step-3) 33.2% 49.8%,
+    var(--step-4) 49.8% 66.4%,
+    var(--step-5) 66.4% 83%,
+    var(--step-6) 100%);
+  background-repeat: repeat-x;
+  content: "";
+  display: block;
+  padding-top: 0.25rem;
+  width: 2rem;
+}
+
+.section__header::before {
+  content: "\002B1D";
+  margin-right: 0.5rem;
+}
+
+.section__header {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.section__header--step-1::before {
+  color: var(--step-1);
+}
+
+.section__header--step-2::before {
+  color: var(--step-2);
+}
+
+.section__header--step-3::before {
+  color: var(--step-3);
+}
+
+.desclist__term, dd {
+  display: inline;
+}
+
+.desclist__term {
+  font-weight: 700;
+}
+
+.desclist__term::after {
+  color: var(--step-1);
+  content: "\002014";
+  margin-left: 0.25rem;
+}
+
+.desclist__definition {
+  margin: 0;
+}
+
+.desclist__definition::after {
+  content: "\A";
+  display: block;
+  line-height: 0.5rem;
+  white-space: pre;
+}
+
+.footer {
+  background: var(--body-text);
+  color: #fff;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+
+.footer__paragraph {
+  margin: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  main {
+    margin: 1rem 2rem;
+  }
+
+  .banner {
+    padding-bottom: calc((1 / 2.1) * 100%);
+  }
+
+  .sitenav {
+    display: flex;
+  }
+
+  .sitenav__item {
+    flex: 1;
+  }
+
+  .sitenav__number {
+    display: block;
+  }
+
+  .section__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .levelbanner {
+    margin-right: 1rem;
+  }
+
+  .footer {
+    padding: 1rem 2rem;
+  }
+}
