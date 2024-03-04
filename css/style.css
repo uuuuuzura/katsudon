@@ -129,6 +129,10 @@ main {
   color: var(--step-3);
 }
 
+.albumcover:not(:last-child) {
+  margin-right: 0.2rem;
+}
+
 .desclist__term, dd {
   display: inline;
 }
@@ -162,7 +166,6 @@ main {
   text-align: center;
   font-size: 0.75rem;
 }
-
 
 .footer__paragraph {
   margin: 0.5rem;
