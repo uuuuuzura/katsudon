@@ -9,6 +9,16 @@
   --step-5: #4b5876;
   --step-6: #2f4858;
 
+  --red: #c44f6e;
+  --orange: #ee947c;
+  --yellow: #f9f871;
+  --green: #4bbc8e;
+  --blue: #1c6e7d;
+  --purple: #77648b;
+  --brown: #54422f;
+  --grey: #9baebc;
+  --special: #da9bb7;
+
   --body-text: #374955;
 }
 
@@ -105,16 +115,20 @@ main {
   width: 2rem;
 }
 
-.section__header::before {
+.section__header::before, .deck__header::before {
   content: "\002B1D";
   margin-right: 0.5rem;
 }
 
-.section__header {
+.section__header, .deck__header {
   font-size: 1.25rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+}
+
+.deck__header {
+  text-align: center;
 }
 
 .section__header--step-1::before {
@@ -129,8 +143,52 @@ main {
   color: var(--step-3);
 }
 
+.deck__header--red::before {
+  color: var(--red);
+}
+
+.deck__header--orange::before {
+  color: var(--orange);
+}
+
+.deck__header--yellow::before {
+  color: var(--yellow);
+}
+
+.deck__header--green::before {
+  color: var(--green);
+}
+
+.deck__header--blue::before {
+  color: var(--blue);
+}
+
+.deck__header--purple::before {
+  color: var(--purple);
+}
+
+.deck__header--brown::before {
+  color: var(--brown);
+}
+
+.deck__header--grey::before {
+  color: var(--grey);
+}
+
+.deck__header--special::before {
+  color: var(--special);
+}
+
 .albumcover:not(:last-child) {
   margin-right: 0.2rem;
+}
+
+.deck {
+  width: 100%;
+}
+
+.deck table {
+  margin: auto;
 }
 
 .desclist__term, dd {
@@ -196,6 +254,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .levelbanner {
@@ -204,5 +263,11 @@ main {
 
   .footer {
     padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .deck {
+    width: 50%;
   }
 }
