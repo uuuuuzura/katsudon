@@ -1,0 +1,9 @@
+# Development related files
+style.css.map
+
+# Template and note files
+album-template.clip
+database-schema.dbml
+
+# Card image files
+public/img/cards
