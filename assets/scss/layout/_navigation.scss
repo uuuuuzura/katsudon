@@ -1,0 +1,37 @@
+.sitenav {
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.075rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+
+  @include media($layout-break) {
+    display: flex;
+  }
+
+  &__item {
+    @include media($layout-break) {
+      flex: 1;
+    }
+  }
+
+  &__number {
+    @include media($layout-break) {
+      display: block;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+  }
+
+  @each $name, $colour in $steps {
+    &--#{$name} {
+      background-color: $colour;
+    }
+  }
+}

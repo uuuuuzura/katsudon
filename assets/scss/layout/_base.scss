@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+
+body {
+  background: $background-image;
+  font: 16px "Montserrat", sans-serif;
+  color: $body-text;
+}
+
+main {
+  margin: 1rem;
+
+  @include media($layout-break) {
+    margin: 1rem 2rem;
+  }
+}
+
+.container {
+  background: #fff;
+  margin: 0 auto;
+  max-width: 850px;
+}
+
+.link {
+  color: $step-1;
+  text-decoration: none;
+  border-bottom: 1px dotted $step-2;
+}

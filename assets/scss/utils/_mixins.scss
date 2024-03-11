@@ -1,0 +1,17 @@
+@mixin header-style {
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  &::before {
+    content: "\002B1D";
+    margin-right: 0.5rem;
+  }
+}
+
+@mixin media($breakpoint) {
+  @media screen and (min-width: #{$breakpoint}) {
+    @content;
+  }
+}

@@ -1,0 +1,10 @@
+.banner {
+  background: $banner-image center/cover;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: calc((1 / 2.4) * 100%);
+
+  @include media($layout-break) {
+    padding-bottom: calc((1 / 2.1) * 100%);
+  }
+}

@@ -1,0 +1,23 @@
+.deck {
+  width: 100%;
+
+  table {
+    margin: auto;
+  }
+
+  @include media($deck-break) {
+    width: 50%;
+  }
+
+  &__header {
+    @include header-style;
+
+    text-align: center;
+
+    @each $name, $colour in $colours {
+      &--#{$name}::before {
+        color: $colour;
+      }
+    }
+  }
+}

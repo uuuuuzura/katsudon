@@ -1,0 +1,52 @@
+/* Colours */
+$step-1: #ee947c;
+$step-2: #d37d8c;
+$step-3: #a86f93;
+$step-4: #77648b;
+$step-5: #4b5876;
+$step-6: #2f4858;
+
+$steps: (
+  "step-1": $step-1,
+  "step-2": $step-2,
+  "step-3": $step-3,
+  "step-4": $step-4,
+  "step-5": $step-5,
+  "step-6": $step-6,
+);
+
+$red: #c44f6e;
+$orange: #ee947c;
+$yellow: #f9f871;
+$green: #4bbc8e;
+$blue: #1c6e7d;
+$purple: #77648b;
+$brown: #54422f;
+$grey: #9baebc;
+$special: #da9bb7;
+
+$colours: (
+  "red": $red,
+  "orange": $orange,
+  "yellow": $yellow,
+  "greem": $green,
+  "blue": $blue,
+  "purple": $purple,
+  "brown": $brown,
+  "grey": $grey,
+  "special": $special,
+);
+
+$body-text: #374955;
+
+/* Fonts */
+$font-weight-bold: 900;
+$font-weight-semi-bold: 700;
+
+/* Images */
+$banner-image: url(../img/ib-header.jpg);
+$background-image: url(../img/stripes-light.png);
+
+/* Breakpoints */
+$layout-break: 600px;
+$deck-break: 750px;
