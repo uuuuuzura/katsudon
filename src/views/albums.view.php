@@ -1,9 +1,12 @@
 <?php
-  require(__DIR__ . '/../models/album.model.php');
 
-  $albumData = $db->query("SELECT * FROM albums ORDER BY label ASC")->fetchAll();
+require(__DIR__ . '/../models/album.model.php');
 
-  $albums = array_map(function ($album) { return new Album($album['label'], $album['slug']); }, $albumData);
+$albumData = $db->query("SELECT * FROM albums ORDER BY label ASC")->fetchAll();
+
+$albums = array_map(function ($album) {
+  return new Album($album['label'], $album['slug']);
+}, $albumData);
 ?>
 
 <?php include __DIR__ . '/includes/header.include.php' ?>
@@ -13,7 +16,9 @@
   <section class="section">
     <h2 class="section__header section__header--step-1">Open Albums</h2>
     <div class="section__container">
-      <?php foreach ($albums as $album) { $album->renderCover(); } ?>
+      <?php foreach ($albums as $album) {
+        $album->renderCover();
+      } ?>
     </div>
   </section>
   <section class="section">

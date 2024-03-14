@@ -1,22 +1,27 @@
 <?php
 
-class Router {
+class Router
+{
     protected $routes = [];
 
-    public static function load($file) {
+    public static function load($file)
+    {
         $router = new static;
         require $file;
         return $router;
     }
 
-    public function register(string $uri, string $controllerPath) {
+    public function register(string $uri, string $controllerPath)
+    {
         $this->routes[$uri] = $controllerPath;
     }
 
-    public function direct(string $uri) {
-        if(array_key_exists($uri, $this->routes)) {
+    public function direct(string $uri)
+    {
+        if (array_key_exists($uri, $this->routes)) {
             return $this->routes[$uri];
-        };
+        }
+        ;
 
         throw new Exception('Page not found.');
     }
