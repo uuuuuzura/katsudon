@@ -1,32 +1,9 @@
 <?php
-  class Album {
-    public string $label;
-    protected string $slug;
+  require(__DIR__ . '/../models/album.model.php');
 
-    public function __construct(string $label, string $slug) {
-      $this->label = $label;
-      $this->slug = $slug;
-    }
+  $albumData = $db->query("SELECT * FROM albums ORDER BY label ASC")->fetchAll();
 
-    public function renderCover() {
-      $imgSrc = 'img\album-covers\\' . $this->slug . '.png';
-      $aHref = '/albums/' . $this->slug;
-
-      echo '<a class="albumcover" href="' . $aHref . '"><img src=' . $imgSrc . ' alt="' . $this->label . '"/></a>';
-    }
-  }
-
-  function sortAlbumsByName(Album $albumA, Album $albumB) {
-    return $albumA->label > $albumB->label ? 1 : -1;
-  }
-
-  $albums = array(
-    new Album('Hatoful Boyfriend', 'hatoful-boyfriend'),
-    new Album('Nu:Carnival', 'nu-carnival'),
-    new Album('Akiba Maid War', 'akiba-maid-war'),
-  );
-
-  usort($albums, "sortAlbumsByName");
+  $albums = array_map(function ($album) { return new Album($album['label'], $album['slug']); }, $albumData);
 ?>
 
 <?php include __DIR__ . '/includes/header.include.php' ?>
