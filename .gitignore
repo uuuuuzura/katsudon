@@ -7,3 +7,6 @@ database-schema.dbml
 
 # Card image files
 public/img/cards
+
+# Sensitive Data
+credentials.php
