@@ -531,7 +531,7 @@ main {
 .deck__header--yellow::before {
   color: #f9f871;
 }
-.deck__header--greem::before {
+.deck__header--green::before {
   color: #4bbc8e;
 }
 .deck__header--blue::before {
@@ -543,7 +543,7 @@ main {
 .deck__header--brown::before {
   color: #54422f;
 }
-.deck__header--grey::before {
+.deck__header--gray::before {
   color: #9baebc;
 }
 .deck__header--special::before {
