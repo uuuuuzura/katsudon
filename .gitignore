@@ -5,8 +5,9 @@ style.css.map
 album-template.clip
 database-schema.dbml
 
-# Card image files
+# Non-layout image files
 public/img/cards
+public/img/level-banners
 
 # Sensitive Data
 credentials.php
