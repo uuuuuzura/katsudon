@@ -10,10 +10,12 @@ if (!$album) {
     throw new Exception('Page not found.');
 }
 
-$decksData = $db->query("SELECT slug, label, color FROM decks WHERE albumId = :id ORDER BY color, slug ASC", ['id' => $albumId])->fetchAll();
+$decksData = $db->query("SELECT id, slug, label, color FROM decks WHERE albumId = :id ORDER BY color, slug ASC", ['id' => $albumId])->fetchAll();
 
-$decks = array_map(function ($deck) {
-    return new Deck($deck['slug'], $deck['label'], $deck['color']);
+$decks = array_map(function ($deck) use ($db) {
+    $deckObject = new Deck($deck['id'], $deck['slug'], $deck['label'], $deck['color']);
+    $deckObject->getCollectedCards($db);
+    return $deckObject;
 }, $decksData);
 
 require __DIR__ . '/../views/album.view.php';
