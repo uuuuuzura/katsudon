@@ -5,7 +5,7 @@
   <section class="section">
     <h2 class="section__header section__header--step-1">Guidelines</h2>
     <ul>
-      <li>Please conduct all trades under <a href="#">this Dreamwidth entry</a>
+      <li>Please conduct all trades under <a class="link" href="#">this Dreamwidth entry</a>
       <li>Only cards in this section are eligable for trade</li>
       <li>There is no limit on the amount traded at one time</li>
     </ul>
