@@ -23,6 +23,6 @@ class Router
         }
         ;
 
-        throw new Exception('Page not found.');
+        return $this->routes['404'];
     }
 }
