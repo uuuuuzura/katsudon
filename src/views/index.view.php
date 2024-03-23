@@ -5,7 +5,7 @@
   <section class="section">
     <h2 class="section__header section__header--step-1">Statistics</h2>
     <div class="section__container">
-      <img class="levelbanner" src="img/level-banners/level_sasurauchiha01_01.gif" alt="Red">
+      <?php $level->renderBanner(); ?>
       <dl class="desclist">
         <dt class="desclist__term">Name</dt>
         <dd class="desclist__definition">Quails</dd>
@@ -17,7 +17,7 @@
         <dd class="desclist__definition">1st January 2020</dd>
 
         <dt class="desclist__term">Card Count</dt>
-        <dd class="desclist__definition">0</dd>
+        <dd class="desclist__definition"><?php echo $cardCount ?></dd>
 
         <dt class="desclist__term">Masterd Decks</dt>
         <dd class="desclist__definition">0</dd>
