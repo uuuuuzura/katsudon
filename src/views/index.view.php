@@ -14,7 +14,7 @@
         <dd class="desclist__definition">Active</dd>
 
         <dt class="desclist__term">Last Updated</dt>
-        <dd class="desclist__definition">1st January 2020</dd>
+        <dd class="desclist__definition"><?php echo date_format($lastUpdated, 'jS F Y') ?></dd>
 
         <dt class="desclist__term">Card Count</dt>
         <dd class="desclist__definition"><?php echo $cardCount ?></dd>
