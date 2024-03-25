@@ -1,4 +1,4 @@
-# 🎴 Katsudon
+# 🎴 Katsusando
 A card site for [Colors TCG](https://colors-tcg.eu/) to display collecting and mastered decks and facillitate trading
 
 Or at least it will be once it's finished
