@@ -24,6 +24,17 @@
 }
 
 .section {
+  &--logs {
+    @include media($layout-break) {
+      display: flex;
+      justify-content: space-between;
+
+      & > .section {
+        width: 48%;
+      }
+    }
+  }
+
   &__header {
     @include header-style;
 

@@ -404,6 +404,15 @@ main {
   width: 2rem;
 }
 
+@media screen and (min-width: 600px) {
+  .section--logs {
+    display: flex;
+    justify-content: space-between;
+  }
+  .section--logs > .section {
+    width: 48%;
+  }
+}
 .section__header {
   font-size: 1.25rem;
   font-weight: 900;
@@ -548,6 +557,18 @@ main {
 }
 .deck__header--special::before {
   color: #da9bb7;
+}
+
+.log {
+  width: 100%;
+  font-size: 0.85rem;
+}
+.log .log__header {
+  color: #d37d8c;
+  font-size: 0.9rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
