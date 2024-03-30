@@ -1,6 +1,6 @@
 <?php
 
-require (__DIR__ . '/../models/deck.model.php');
+require (__DIR__ . '/../../models/deck.model.php');
 
 $albumId = $_GET['id'];
 
@@ -19,4 +19,4 @@ $decks = array_map(function ($deck) use ($db) {
     return $deckObject;
 }, $decksData);
 
-require __DIR__ . '/../views/album.view.php';
+require __DIR__ . '/../../views/albums/id.view.php';

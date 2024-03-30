@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/includes/header.include.php' ?>
+<?php include __DIR__ . '/../includes/header.include.php' ?>
 
 <main>
   <h1 class="pagename"><?php echo $album['label'] ?></h1>
@@ -11,4 +11,4 @@
   </section>
 </main>
 
-<?php include __DIR__ . '/includes/footer.include.php' ?>
+<?php include __DIR__ . '/../includes/footer.include.php' ?>
