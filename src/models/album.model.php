@@ -15,7 +15,7 @@ class Album
 
     public function renderCover()
     {
-        $imgSrc = 'img\album-covers\\' . $this->slug . '.png';
+        $imgSrc = 'img/album-covers/' . $this->slug . '.png';
         $aHref = '/album?id=' . $this->id;
 
         echo '<a class="albumcover" href="' . $aHref . '"><img src=' . $imgSrc . ' alt="' . $this->label . '"/></a>';

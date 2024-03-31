@@ -20,7 +20,8 @@ class Deck
     {
         $cards = $db->query("SELECT number FROM cards WHERE deckId = :id AND status = 'collecting'", ['id' => $this->id])->fetchAll();
         $this->collectedCards = array_map(function ($card) {
-            return $card['number']; }, $cards);
+            return $card['number'];
+        }, $cards);
     }
 
     public function renderDeck()
@@ -35,7 +36,7 @@ class Deck
                 echo "<tr>";
             }
             echo "<td>";
-            echo "<img src=\"..\..\img\cards\\" . $this->slug . $cardNumber . ".gif\" />";
+            echo "<img src=\"img/cards/" . $this->slug . $cardNumber . ".gif\" />";
             echo "</td>";
             if ($i % 5 === 0) {
                 echo "</tr>";

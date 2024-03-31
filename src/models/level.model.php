@@ -27,6 +27,6 @@ class Level
 
     public function renderBanner()
     {
-        echo '<img class="levelbanner" src="../../img/level-banners/' . $this->bannerImg . '" alt="' . $this->label . '">';
+        echo '<img class="levelbanner" src="img/level-banners/' . $this->bannerImg . '" alt="' . $this->label . '">';
     }
 }

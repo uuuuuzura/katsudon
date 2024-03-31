@@ -5,12 +5,16 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-require __DIR__ . '/../src/utilities/router.php';
-require __DIR__ . '/../src/utilities/request.php';
-require __DIR__ . '/../src/utilities/database.php';
+const BASE_PATH = __DIR__ . '/../';
 
-$config = require('../config/credentials.php');
+require BASE_PATH . 'src/utilities/loader.php';
+
+require Loader::basePath('src/utilities/router.php');
+require Loader::basePath('src/utilities/request.php');
+require Loader::basePath('src/utilities/database.php');
+
+$config = require Loader::basePath('config/credentials.php');
 
 $db = new Database($config['connectionString'], $config['username'], $config['password']);
 
-require Router::load(__DIR__ . '/../src/utilities/routes.php')->direct(Request::uri());
+require Router::load(Loader::basePath('src/utilities/routes.php'))->direct(Request::uri());

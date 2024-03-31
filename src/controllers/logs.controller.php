@@ -1,6 +1,6 @@
 <?php
 
-require (__DIR__ . '/../models/log.model.php');
+require Loader::basePath('src/models/log.model.php');
 
 $logData = $db->query("SELECT label, date, type, cardsReceived, cardsSubmitted FROM LOGS")->fetchAll();
 $logs = array_map(function ($log) {
@@ -10,7 +10,8 @@ $logs = array_map(function ($log) {
 function renderActivityLogs(array $logs)
 {
     $activityLogs = array_filter($logs, function ($log) {
-        return $log->type === 'activity'; });
+        return $log->type === 'activity';
+    });
 
     foreach ($activityLogs as $log) {
         $log->renderLog();
@@ -20,11 +21,14 @@ function renderActivityLogs(array $logs)
 function renderTradingLogs(array $logs)
 {
     $activityLogs = array_filter($logs, function ($log) {
-        return $log->type === 'trading'; });
+        return $log->type === 'trading';
+    });
 
     foreach ($activityLogs as $log) {
         $log->renderLog();
     }
 }
 
-require __DIR__ . '/../views/logs.view.php';
+Loader::view('logs', [
+    'logs' => $logs
+]);

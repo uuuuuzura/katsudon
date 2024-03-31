@@ -1,3 +1,3 @@
 <?php
 
-require __DIR__ . '/../views/mastered.view.php';
+Loader::view('mastered');

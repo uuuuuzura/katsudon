@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/includes/header.include.php' ?>
+<?php include Loader::basePath('src/views/includes/header.include.php') ?>
 
 <main>
   <h1 class="pagename">Trading</h1>
@@ -24,4 +24,4 @@
   </section>
 </main>
 
-<?php include __DIR__ . '/includes/footer.include.php' ?>
+<?php include Loader::basePath('src/views/includes/footer.include.php') ?>
